@@ -5,6 +5,17 @@ from sonora_portal001.principal.models import Cadastra_Email, Link
 from sonora_portal001.principal.forms import NoticiaAdminForm
 from sonora_portal001.noticias.models import Noticia
 
+from django.contrib.flatpages.models import FlatPage
+from django.contrib.flatpages.admin import FlatPageAdmin as FlatPageAdminOld
+
+class FlatPageAdmin(FlatPageAdminOld):
+    class Media:
+         js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js')
+
+# We have to unregister it, and then reregister
+admin.site.unregister(FlatPage)
+admin.site.register(FlatPage, FlatPageAdmin)
+
 class NoticiaAdmin(admin.ModelAdmin):
     form = NoticiaAdminForm
     date_hierarchy = 'criado_em'
