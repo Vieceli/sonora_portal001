@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block titulo %}Artista - {{ artista.nome }}{{ n{% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+
+<div id="conteudo" class="conteudo">
+		
+	<div id="artista" class="artista">
+		<h1><img src="/media/{{ artista.imagem }}"  class="bn" width="60" height="60" align="left"/>  {{ artista.nome }}</h1>
+		<h3> {{ artista.subtitulo }}</h3>
+		<small> {{ artista.criado_em }}</small>
+		<p class="artista_texto" id="artista_texto"> {{ artista.resumo|safe }}</p>
+	</div>
+	<div id="video_empresa" class="video_empresa">
+			
+	</div>
+	</div>
+	<div id="agende_visita" class="agende_visita">
+		Clique aqui para agendar uma visita
+	</div>
+</div>	
+{% endblock conteudo %}	

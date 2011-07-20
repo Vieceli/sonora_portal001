@@ -8,13 +8,13 @@ Created on 03/05/2011
 #from django import forms
 #from principal.models import Cadastra_Email
 from django.forms.models import ModelForm
-from contato.models import Contato
+from artistas.models import Artista_Contato
 
 
-class ContatoForm(ModelForm):
+class ArtistaForm(ModelForm):
     class Meta:
-        model = Contato
-    
+        model = Artista_Contato
+
 
 #class NoticiaAdminForm(ModelForm):
 #    class Meta:

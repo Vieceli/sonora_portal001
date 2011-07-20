@@ -1,7 +1,8 @@
 # Create your views here.
 from django.shortcuts import render_to_response, get_object_or_404
-from sonora_portal001.noticias.models import Noticia
+
 from django.template.context import RequestContext
+from noticias.models import Noticia
 
 def noticias(request,template_name):
     usuario=request.user

@@ -72,7 +72,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
-   # 'apostwithyou001.utils.context_processors',
 )
                      
                  
@@ -108,10 +107,16 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.flatpages',
-    'principal',
+    'django.contrib.syndication',
+    'artistas',
     'contas',
+    'contato',
     'noticias',
-)
+    'principal',
+    'photologue',
+    
+    
+    )
 
 AUTHENTICATION_BACKENDS = (
     # this is the default backend, don't forget to include it!

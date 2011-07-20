@@ -22,55 +22,18 @@
 
 
 {% block conteudo %}
-<!--
-contato_form = ContatoForm()
-contratante_form = ContratantesForm()
-compositor_form = CompositoresForm()
-artista_form = ArtistaForm()
-radialista_form = RadialistaForm()
-parceiro_form = ParceiroForm()
-<li>
-	<a href="#fragment-4"><span>Artista</span></a>
-</li>
-<li>
-	<a href="#fragment-5"><span>Radialista</span></a>
-</li>
-<li>
-	<a href="#fragment-6"><span>Parceiro</span></a>
-</li>
--->
 <div id="conteudo" class="conteudo">
-		
-	<div id="tabs">
-	    <ul>
-	        <li><a href="#fragment-1"><span>Contato</span></a></li>
-	        <li><a href="#fragment-2"><span>Contratante</span></a></li>
-	        <li><a href="#fragment-3"><span>Compositor</span></a></li>
-	        <li><a href="#fragment-4"><span>Artista</span></a></li>
-			<li><a href="#fragment-5"><span>Radialista</span></a></li>
-			<li><a href="#fragment-6"><span>Parceiro</span></a></li>
-	    </ul>
-    <div id="fragment-1">
-        <form action="." method="post">{% csrf_token %} 
+	<div id="contato" class="contato">
+       	<form enctype="multipart/form-data" action="." method="post">{% csrf_token %} 
 		    {% for field in contato_form %}
 		        <div class="fieldWrapper">
 		            {{ field.errors }}
 		            {{ field.label_tag }}: {{ field }}
 		        </div>
 		    {% endfor %}
-	<p><input type="hidden" value="contato"/></p>
-    <p><input type="submit" value="Enviar "/></p>
-  
-</form>
-
-    </div>
-    <div id="fragment-2">
-       framnento2
-    </div>
-    <div id="fragment-3">
-        fragmento 3
-    </div>
-</div>
-
+			<p><input type="hidden" value="contato" name="contato"/></p>
+		    <p><input type="submit" value="Enviar" /></p>
+		</form>
+ 	</div>
 </div>	
 {% endblock conteudo %}	

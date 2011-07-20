@@ -14,20 +14,13 @@ class NoticiaAdminForm(ModelForm):
     class Meta:
         model = Noticia
         fields = ('titulo', 'subtitulo', 'slug','miniatura','texto','resumo')
-#        widgets = {
-#            'resumo': Textarea(attrs={'cols': 80, 'rows': 20}),
-#        }
 
 class FormBuscar(forms.Form):
     query = forms.CharField(label=u'Procurar por: ',widget=forms.TextInput(attrs={'size': 32}))
     
-
-
 class FormCadEmail(forms.Form):
     email = forms.EmailField(label=u'Digite o email: ',widget=forms.TextInput(attrs={'size': 32}))
     remover = forms.BooleanField(label=u'Remover e-mail', widget=forms.CheckboxInput())
-    
-    
     def clean_email(self):
         email = self.cleaned_data['email']
         try:

@@ -3,9 +3,9 @@
 
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template.context import RequestContext
-from sonora_portal001.principal.forms import FormCadEmail
-from sonora_portal001.principal.models import Cadastra_Email, Link
-from sonora_portal001.noticias.models import Noticia
+from noticias.models import Noticia
+from principal.models import Link
+
 
 def index(request):
     usuario=request.user

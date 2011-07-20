@@ -15,6 +15,8 @@
     {% endblock metadata %}
 
     <link type="text/css" rel="stylesheet" href="/media/css/estilo.css" />
+	<link href="/media/css/ui-lightness/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css"/>
+
 
     {% block extralinks %}
     {% endblock extralinks %}
@@ -22,10 +24,12 @@
 	    {% block extracss %}
 	    {% endblock extracss %}
     </style>
-    <script type="text/javascript" src="/media/js/jquery-1.3.2.min.js" charset="utf-8"></script>
+    
     <script type="text/javascript" src="/media/js/cuponClipper.js" charset="utf-8"></script>
-    <script type="text/javascript" src="/media/js/jquery.watermarkinput.js" charset="utf-8"></script>
-
+    
+    <script type="text/javascript" src="/media/js/jquery-1.5.1.min.js" charset="utf-8"></script>
+  	<script type="text/javascript" src="/media/js/jquery-ui-1.8.14.custom.min.js" charset="utf-8"></script>
+  	 
     {% block extrascripts %}
     {% endblock extrascripts %}
     
@@ -33,19 +37,14 @@
     <script language="javascript">
 	  $(document).ready(function()
 	  {
-	    $("#user-msg-close").click(function () {
-	      $("#user-msg-div").hide();
-	      return false;
-	    });
-	
-	    $("#cidade-slider-link").click(function () {
-	      $(".cidades-slider").slideToggle("slow");
-	      return false;
-	    });
-	
-	    
+	    	
+		$("#tabs").tabs({
+			
+		});
+
 	  });
 
+	
     {% block extrajs %}
     {% endblock extrajs %}
 

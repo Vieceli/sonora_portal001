@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*- 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse
 
 #OFERTA_IMG = 'cupon_imagens/'
 #OFERTA_MINI = 'cupon_mini/'
@@ -24,17 +23,6 @@ class Link(models.Model):
     
     def __unicode__(self):
         return self.titulo
-    
-    def admin_image(self):
-        return '<img src="%s"/>' % self.miniatura
-    admin_image.allow_tags = True
-
-   # def get_absolute_url(self):
-   #     return reverse('noticias', kwargs={'noticia_slug': self.pk})
-    def get_absolute_url(self):
-        return reverse('links', kwargs={'link_slug': self.slug})
-#    def get_absolute_url(self):
-#        return (u'noticias', (), { u'noticia_slug': self.slug })
 
 class Cadastra_Email(models.Model):
     class Meta:

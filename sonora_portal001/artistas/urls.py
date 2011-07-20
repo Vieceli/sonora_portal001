@@ -5,11 +5,11 @@ Created on 14/07/2011
 '''
 from django.conf.urls.defaults import patterns, url
 
-urlpatterns = patterns('noticias.views',
+urlpatterns = patterns('artistas.views',
           
-        url(r'^$', 'noticias', 
-            {'template_name':'principal/noticias.html'}, name='noticias'),
+        url(r'^$', 'artistas', 
+            {'template_name':'artistas/artistas.html'}, name='artistas'),
                   
-        url(r'^(?P<noticia_slug>[-\w]+)/$', 'noticia', 
-            {'template_name':'principal/noticia.html'}, name='noticia'),
+        url(r'^(?P<artista_slug>[-\w]+)/$', 'artista', 
+            {'template_name':'artista/artista.html'}, name='artista'),
         )

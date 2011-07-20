@@ -9,15 +9,15 @@ class Noticia(models.Model):
         verbose_name = _('Noticia')
         verbose_name_plural = _('Noticias')
         
-    titulo = models.CharField("Titulo",max_length=255,
+    titulo              = models.CharField("Titulo",max_length=255,
                               help_text=u'Titulo da noticia',default='Lorem Ipsum')
-    subtitulo = models.CharField("Subtitulo",max_length=255,
+    subtitulo           = models.CharField("Subtitulo",max_length=255,
                               help_text=u'Subtitulo da noticia',default='Lorem ipsum dolor sit amet!')
-    texto = models.TextField("Texto da Noticia")
-    resumo = models.TextField("Resumo da Noticia",max_length=30,
+    texto               = models.TextField("Texto da Noticia")
+    resumo              = models.TextField("Resumo da Noticia",max_length=30,
                               help_text=u'Digite 30 caracteres resumindo a Noticia' )
-    slug = models.SlugField(unique=True)
-    miniatura = models.ImageField(upload_to='mini_noticia/', blank=False)
+    slug                = models.SlugField(unique=True)
+    miniatura           = models.ImageField(upload_to='mini_noticia/', blank=False)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
     
